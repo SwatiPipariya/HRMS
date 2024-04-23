@@ -1,0 +1,119 @@
+.reg_main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.triangle {
+    background-image: linear-gradient(to bottom right, whitesmoke 50%, #00c2ff 50%);
+    height: 100vh;
+}
+
+.sub_reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+     
+.top {
+    display: flex;
+    justify-content: center;
+}
+
+.fill-1 {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: max-content;
+    height: 50px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-left-width: 0px;
+    box-shadow: 1px 1px 1px gray;
+
+}
+
+.fill-2 {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: max-content;
+    height: 50px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-right-width: 0px;
+    box-shadow: 1px 1px 1px gray;
+}
+
+.cir-1 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #00c2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cir-2 {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 83%;
+}
+
+.box {
+    padding: 10px;
+    border: none;
+    width: 250px;
+    margin: 7px;
+    background: transparent;
+}
+
+.box:focus {
+    border: none; 
+    outline: none; 
+}
+
+.btn_reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clig {
+    background: whitesmoke;
+    border: none;
+    width: 120px;
+    height: 40px;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quick {
+    color: blue;
+    margin: 3px;
+}
+
+.link {
+    text-decoration: none;
+}

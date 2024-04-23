@@ -1,0 +1,145 @@
+.triangle {
+    background-image: linear-gradient(to bottom right, whitesmoke 50%, #00c2ff 50%);
+    height: 100vh;
+}
+
+
+.log_main {
+    font-family: sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   background: transparent;
+}
+
+
+.sub_main {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+
+.field-1 {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: max-content;
+    height: 50px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-left-width: 0px;
+    box-shadow: 1px 1px 1px gray;
+    
+}
+
+.field-2 {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: max-content;
+    height: 50px;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-right-width: 0px;
+    box-shadow: 1px 1px 1px gray;
+
+}
+
+.circle-1 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00c2ff;
+
+    
+}
+
+.circle-2 {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+
+   
+}
+.rect {
+    padding: 10px;
+    border-left-width: 0px;
+    border: none;
+    width: 250px;
+    margin: 7px;
+    background: transparent;
+}
+
+.rect:focus {
+    border: none; 
+    outline: none; 
+}
+
+.btn_lin {
+    background-color: whitesmoke;
+    width: 120px;
+    height: 40px;
+    border: none;
+    color: black;
+    border-radius: 3px;
+    margin: 4px;
+    font-weight: bolder;
+   
+}
+
+.fa {
+    color: black;
+}
+.bef68{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.fghjuy {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.swe {
+    color: blue;
+    margin: 2px;
+}
+
+.d9i8y {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 35px;
+    color: blue;
+}
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.cat {
+    text-decoration: none;
+}
+

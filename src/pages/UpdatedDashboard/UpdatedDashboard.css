@@ -1,0 +1,59 @@
+.manas {
+    width: 100%;
+    height: 100vh;
+    padding: 0% 0% 0% 1%;
+}
+
+.rw-1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.crda-tp {
+    width: 20%;
+    box-shadow: 2px 2px 4px  gray;
+    /* background: white; */
+
+}
+
+.bbch {
+   width: 94%;
+   margin: auto;
+   padding-top: 3%;  
+   /* box-shadow: 2px 2px 4px  gray; */
+   /* overflow-x: scroll; */
+ 
+}
+
+.zsdr {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.kmcep {
+   width: 45%;
+   box-shadow: 2px 2px 4px gray;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.qmvs {
+    width: 45%;
+    box-shadow: 2px 2px 4px gray;
+
+}
+
+.drp {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mklsqo {
+    width: 94%;
+    margin: auto;
+    padding-top: 3%; 
+}
+

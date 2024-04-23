@@ -1,0 +1,485 @@
+.main-container {
+  /* display: flex;
+  height: 100vh;
+  width: max-content; */
+
+}
+/* .InterviewUpdate{
+  color:#4CAF50;
+} */
+.all {
+  padding: 10px;
+  /* width: 100%; */
+  box-sizing: border-box; 
+  transition: margin-left 0.5s;
+  margin-left: 45px; 
+}
+
+
+.all.open {
+  margin-left: 200px; 
+}
+
+@media (min-width: 992px)
+{
+  .all {
+    width: calc(100% - 200px);
+}
+}
+
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgb(0, 7, 61);
+  color: white;
+  
+}
+
+@media (min-width: 992px)
+{
+  .sidebar {
+    margin-left: 0;
+}
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.logo {
+  font-size: 18px;
+  line-height: 0;
+}
+
+.bars {
+  width: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+
+.search input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+  color: white;
+}
+
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  text-decoration: none;
+}
+
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.active {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+}
+
+.link_text {
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.menu {
+  display: flex;
+  color: white;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+
+.menu_item {
+  display: flex;
+  gap: 10px;
+}
+
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_container .link {
+  padding-left: 20px;
+  border-bottom: #fff 0.5px solid;
+}
+
+/* .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 45px;
+  z-index: 1000;
+  background-color: #333;
+  color: #fff;
+} */
+
+
+
+
+
+*{
+  margin: 0;padding: 0;
+}
+
+body{
+  /* font-family: ; */
+  font-family: "Poppins","Josefin Sans", sans-serif;
+}
+header {
+  background-color: #a386dda2;
+  padding: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: start;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+li a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+Link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* header css end */
+
+
+/* table css   */
+
+table{
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+  background-color: #f2f2f2;
+}
+th,td{
+  text-align: left;
+  padding: 10px 10px;
+  border-bottom: .5px solid #80808021;
+}
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+tr:hover {
+  background-color: #e6e6e6;
+}
+
+
+
+/* page css   */
+h1{
+  margin: 15px 0px;
+}
+input{
+  padding: 5px;
+}
+
+
+
+
+/* ................................................................form css ......................................//// */
+
+
+.application-form-container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+.hghgch{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+} */
+
+
+
+/* ......................................candidate form css ........................................  */
+#onlyExperienced{
+  display: none;
+}
+
+/* candidate list search button css..................................................  */
+.uyhyy{
+  border: 0.5px solid green;
+    color: black;
+    font-weight: bold;
+    border-radius: 5%;
+
+
+}
+
+.uyhyy:hover {
+  background: green;
+  color: white;
+  font-weight: 700;
+
+}
+
+.sxvfe {
+  border: 1px solid blue;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0.5%;
+  margin: 1%;
+}
+
+.sxvfe:hover {
+  background-color: #483d8b;
+  color: white;
+
+}
+
+.mkscos {
+  border: 1px solid purple;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0.5%;
+  margin: 1%;
+
+}
+
+.mkscos:hover {
+  background-color: #6c3082;
+  color: white;
+}
+
+/* ................................................................ for models  .......................................................... */
+h2{
+  font-size: 40px !important;
+  font-weight: 600 !important;
+}
+
+.CloseModelButton{
+  border: .5px solid greenyellow;
+  padding: 5px 10px ;
+  color:black;
+  border-radius: 5px;
+  /* margin: 5%; */
+}
+
+.CloseModelButton:hover {
+  background-color: #45a049;
+  color: white;
+  font-weight: 500;
+}
+.SearchModelButton{
+  border: .5px solid rgb(47, 161, 255);
+  padding: 5px 10px ;
+  border-radius: 20px;
+  color:black
+}
+.SearchModelButton:hover{
+  background-color: rgb(47, 161, 255) ;
+}
+.EditModelButton{
+  border: .5px solid rgb(47, 161, 255);
+  padding: 5px 10px ;
+  color:black
+}
+
+.SearchModelButton:hover{
+  background-color: rgb(47, 161, 255) ;
+}
+.DeleteModelButton{
+  border: .5px solid rgb(47, 161, 255);
+  padding: 5px 10px ;
+  color:black
+}
+
+.EditModelButton:hover{
+  background-color: rgb(47, 161, 255) ;
+}
+
+.jujhd{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.dfea{
+  width: 70%;
+}
+.ss5d{
+  justify-content: space-between;
+  gap: 20px;
+}
+.white-text {
+  color: white;
+}
+.green-text{
+  color: #45a049;
+}
+.CandidateAssigned-text{
+  color: #45a049;
+}
+
+
+/* button css  */
+.epicOne{
+  border: .5px solid rgb(34, 120, 178) !important;
+  color : rgb(34, 120, 178) !important;
+  padding: 10px 20px !important;
+  margin: 30px 0px;
+  border-radius: 5px;
+}
+
+.ewdf414{
+  width: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+/* .hide-before::before {
+  display: none;
+} */
+
+
+
+#test-table-xls-button{
+  /* font-size: 30px;  */
+  border-radius: 10px;
+  padding: 10px 20px;
+  border :.5px solid rgb(34, 120, 178);
+  font-weight: bolder;
+}
+#test-table-xls-button:hover{
+  transform: ease-in-out .5s !important;
+background-color: rgb(34, 120, 178);
+border-radius: 10px;
+color: white;
+font-weight:800 ;
+}
+
+
+.dcde56o{
+  padding: 0px 8px;
+}
+
+.hdsefsq {
+  border-bottom: 3px solid blue;
+  padding: 7px;
+  background-color: rgba(245, 245, 245, 0.395);
+  color: blue;
+}
+
+
+.hdsefsq:hover {
+  font-weight: 600;
+}
+
+.kgfv {
+  background-color: #004f98;
+  color: white;
+}
+
+.qoxnd {
+  border-bottom: 3px solid blue;
+  padding: 7px;
+  background-color: rgba(245, 245, 245, 0.395);
+  color: blue;
+  margin-left: 1%;
+}
+
+.uqpvcen {
+  border-bottom: 3px solid brown;
+  padding: 7px;
+  background-color: rgba(245, 245, 245, 0.395);
+  color: brown;
+  margin-left: 1%;
+}

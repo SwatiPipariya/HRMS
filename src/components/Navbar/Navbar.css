@@ -1,0 +1,82 @@
+.nav-main {
+    color: #000;
+    
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 7px;
+    width: 93.2vw;
+}
+
+#searchin {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    margin-top: 3px;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+}
+#searchin:hover {
+    border: none;
+    outline: none;
+}
+
+#tggButton {
+    position: relative;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    color: #000;
+    margin-right: 15px;
+    background: transparent;
+}
+
+#magnify {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.srch {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0px 19px 0px 19px;
+}
+
+.rght-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#image_box {
+    width: 40px;
+    height: 40px;
+    background: #be1111;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.fbell {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.logoutIcon{
+    font-size: 24px;
+    margin-left: 20px;
+}

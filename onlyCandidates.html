@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Candidate with Resume</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div style="margin-left: 70px; display: flex; justify-content: center; padding-right: 70px;">
+        <div style="width: 80%; height: max-content;">
+            <h3 style="font-weight: bold; font-size: 25px;">Basic Details</h3>
+            <div style="display: flex; justify-content: space-between; padding: 0px 20px;">
+                <div class="input-group" style="width: 30%;">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" class="form-control" name="fullName" required>
+                </div>
+                <div class="input-group" style="width: 30%;">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" class="form-control" name="dob" required>
+                </div>
+                <div class="input-group" style="width: 30%;">
+                    <label for="fatherName">Father's Name:</label>
+                    <input type="text" id="fatherName" class="form-control" name="fatherName" required>
+                </div>
+            </div>
+            <form enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="fileInput">Choose a file:</label>
+                    <input type="file" id="fileInput" name="file" required>
+                </div>
+                <br>
+                <button type="button" class="btn btn-primary" onclick="uploadFile()">Upload</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            const fullName = document.getElementById('fullName').value;
+            const dob = document.getElementById('dob').value;
+            const fatherName = document.getElementById('fatherName').value;
+
+            // Prepare formData
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('fullName', fullName);
+            formData.append('dob', dob);
+            formData.append('fatherName', fatherName);
+
+            // Send formData via AJAX (example using fetch API)
+            fetch('http://192.168.2.11:5050/candidateWithResume', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Handle response
+                alert('File uploaded successfully!');
+                // Redirect or perform any other action upon successful upload
+                window.location.reload();
+            })
+            .catch(error => {
+                console.error('Error uploading file:', error);
+                alert('Error uploading file. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+
+  .card {
+    width: 1187px;    
+    /* height: 200px; */
+    /* background-color: #fff; */
+    border-radius: 5px;
+    margin: 20px;
+    display: inline-block;
+    position: relative; 
+    /* box-shadow: 2px 2px 1px rgb(255, 252, 252); */
+    /* background: rgb(255, 255, 255); */
+    background: transparent;
+}
+
+  .bulb-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    top: 20px;
+    position: relative;
+  }
+  
+  .bulb-one {
+    width: 150px;
+    height: 150px;
+    /* background-color: blue; */
+    /* background-image: linear-gradient(to right, #00c6ff 0%, #0072ff  51%, #00c6ff  100%); */
+    background-image: linear-gradient(114deg, #40d4ff, #0072ff);
+    border-radius: 50%;
+    margin-top: 10px;
+    position: relative;
+    margin-top: 15px;
+    /* padding: 9px; */
+    opacity: 0.8;
+  }
+
+  .fir-blb {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+  }
+
+  .ic-one {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    color: white;
+    margin: auto;
+  }
+
+  .det-blb {
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* font-weight: 500; */
+    font-size: 10px;
+  }
+
+  .det-blb.big {
+    font-weight: bold;
+    font-size:25px ;
+    margin: 0;padding: 0;
+    margin-top: 15px;
+  }
+  
+  .bulb-one::before {
+    content: '';
+    width: 2px;
+    height: 56px;
+    background-color: black;
+    position: absolute;
+    top: -56px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bulb-two {
+    width: 150px;
+    height: 150px; 
+    /* background-color: red; */
+    /* background-image: linear-gradient(to right, #ff0084 0%, #33001b  51%, #ff0084  100%); */
+    background-image: linear-gradient(114deg, #3cf971, #217857);
+    border-radius: 50%;
+    margin-top: 30px;
+    position: relative;
+    margin-top: 109px;
+    /* padding: 9px; */
+    opacity: 0.8;
+  }
+  
+  .bulb-two::before {
+    content: '';
+    width: 2px;
+    height: 150px; 
+    background-color: black;
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  
