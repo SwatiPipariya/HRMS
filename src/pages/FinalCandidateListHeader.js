@@ -32,9 +32,9 @@ const FinalCandidateListHeader = () => {
         <Button className='SearchModelButton' style={{ marginLeft: '20px' }} onClick={handleSearch}>Search</Button>
       </div>
 
-      <div>
-        <Link className='uqpvcen' to="/complete">Complete</Link>
-        <Link className='qoxnd' to="/pending">Pending</Link>
+      <div style={{marginTop: '1%'}}>
+        <Link className='qoxnd' to={{ pathname: "/complete", state: { filteredClients: filteredClients.filter(candidate => candidate.status === "Selected") } }}>Complete</Link>
+        <Link className='uqpvcen' to={{ pathname: "/pending", state: { filteredClients: filteredClients.filter(candidate => candidate.status !== "Selected") } }}>Pending</Link>
       </div>
     </div>
   );

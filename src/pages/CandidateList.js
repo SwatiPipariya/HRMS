@@ -505,8 +505,6 @@ const CandidatesList = () => {
 
               </div>
               <div className='ewdf414'>
-
-
                 <button type="button" className='uyhyy epicOne' onClick={handleSubmit}>Submit</button>
               </div>
             </div>

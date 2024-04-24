@@ -4,6 +4,7 @@ import { Table, Button, FormControl } from 'react-bootstrap';
 import Modal from 'react-modal';
 import '.././App.css'
 import { Link } from 'react-router-dom';
+import FinalCandidateListHeader from './FinalCandidateListHeader';
 
 const FinalCandidateList = () => {
   const [clients, setClients] = useState([]);
@@ -26,6 +27,7 @@ const FinalCandidateList = () => {
       const response = await axios.get('http://192.168.2.11:5050/final/list/of/candidates'); // Adjust the endpoint as needed
       setClients(response.data);
       setFilteredClients(response.data);
+
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -51,70 +53,82 @@ const FinalCandidateList = () => {
     setModalIsOpen(false);
   };
 
-// const handleSubmit = () => {
-//   console.log('Submit button clicked');
-//   console.log('Selected Candidate:', selectedCandidate);
-//   console.log('All Clients:', clients);
-//   console.log('Filtered Clients:', filteredClients);
+  // const handleSubmit = () => {
+  //   console.log('Submit button clicked');
+  //   console.log('Selected Candidate:', selectedCandidate);
+  //   console.log('All Clients:', clients);
+  //   console.log('Filtered Clients:', filteredClients);
 
-//   if (!selectedCandidate) {
-//     return; 
-//   }
+  //   if (!selectedCandidate) {
+  //     return; 
+  //   }
 
-//   const { fullName, fatherName, dob } = selectedCandidate;
+  //   const { fullName, fatherName, dob } = selectedCandidate;
 
-//   const updatedClients = clients.filter(
-//     client =>
-//       client.fullName.toLowerCase() !== fullName.toLowerCase() ||
-//       client.fatherName.toLowerCase() !== fatherName.toLowerCase() ||
-//       client.dob !== dob
-//   );
+  //   const updatedClients = clients.filter(
+  //     client =>
+  //       client.fullName.toLowerCase() !== fullName.toLowerCase() ||
+  //       client.fatherName.toLowerCase() !== fatherName.toLowerCase() ||
+  //       client.dob !== dob
+  //   );
 
-//   const updatedFilteredClients = filteredClients.filter(
-//     client =>
-//       client.fullName.toLowerCase() !== fullName.toLowerCase() ||
-//       client.fatherName.toLowerCase() !== fatherName.toLowerCase() ||
-//       client.dob !== dob
-//   );
+  //   const updatedFilteredClients = filteredClients.filter(
+  //     client =>
+  //       client.fullName.toLowerCase() !== fullName.toLowerCase() ||
+  //       client.fatherName.toLowerCase() !== fatherName.toLowerCase() ||
+  //       client.dob !== dob
+  //   );
 
-//   setClients(updatedClients);
-//   setFilteredClients(updatedFilteredClients);
+  //   setClients(updatedClients);
+  //   setFilteredClients(updatedFilteredClients);
 
-//   closeModal(); 
-// };
+  //   closeModal(); 
+  // };
 
-// const toggleCandidatesWithRemarks = () => {
-//   setShowCandidatesWithRemarks(!showCandidatesWithRemarks);
-// };
+  // const toggleCandidatesWithRemarks = () => {
+  //   setShowCandidatesWithRemarks(!showCandidatesWithRemarks);
+  // };
 
-const handleSubmitRemark = async () => {
-  try {
-    await axios.post('http://your-api-endpoint', {
-      candidateId: selectedCandidate.id,
-      remark: remark
-    });
-    setFilteredClients(prevClients => prevClients.filter(candidate => candidate.id !== selectedCandidate.id));
-    setCandidatesWithRemarks(prevCandidates => [...prevCandidates, selectedCandidate]);
-    closeModal();
-  } catch (error) {
-    console.error('Error submitting remark:', error);
-  }
-};
+  // const handleSubmitRemark = async () => {
+  //   try {
+  //     await axios.post('http://your-api-endpoint', {
+  //       candidateId: selectedCandidate.id,
+  //       remark: remark
+  //     });
+  //     setFilteredClients(prevClients => prevClients.filter(candidate => candidate.id !== selectedCandidate.id));
+  //     setCandidatesWithRemarks(prevCandidates => [...prevCandidates, selectedCandidate]);
+  //     closeModal();
+  //   } catch (error) {
+  //     console.error('Error submitting remark:', error);
+  //   }
+  // };
 
-const openCandidateWithRemarks = () => {
-  setFilteredClients(candidatesWithRemarks);
-};
+  const handleSubmitRemark = async () => {
+    try {
+      await axios.post('http://your-api-endpoint', {
+        candidateId: selectedCandidate.id,
+        remark: remark
+      });
+      setFilteredClients(prevClients => prevClients.filter(candidate => candidate.id !== selectedCandidate.id));
+      setCandidatesWithRemarks(prevCandidates => [...prevCandidates, selectedCandidate]);
+      closeModal(); // Close the modal after successful submission
+    } catch (error) {
+      console.error('Error submitting remark:', error);
+    }
+  };
+  
+  const openCandidateWithRemarks = () => {
+    setFilteredClients(candidatesWithRemarks);
+  };
 
-const closeCandidatesWithRemarks = () => {
-  setShowCandidatesWithRemarks(false);
-};
-
-
+  const closeCandidatesWithRemarks = () => {
+    setShowCandidatesWithRemarks(false);
+  };
 
 
   return (
-    <div style={{ marginLeft: '60px' }}>
-      <h2>Final Candidate List</h2>
+    <div >
+      {/* <h2>Final Candidate List</h2>
       <div>
         <FormControl
           type="text"
@@ -124,14 +138,17 @@ const closeCandidatesWithRemarks = () => {
           onChange={(e) => setSearchInput(e.target.value)}
         />
         <Button className='SearchModelButton' style={{ marginLeft: '20px' }} onClick={handleSearch}>Search</Button>
-      </div>
-
-      <div>
+      </div> */}
+      {/* <div className='whson' > */}
       {/* <Button className='uqpvcen' onClick={openCandidateWithRemarks}>Candidates with Remarks</Button> */}
-      <Link className='uqpvcen' to="/complete">Complete</Link>
-      <Link className='qoxnd' to="/pending">Pending</Link>
-      </div>
-      <Table striped bordered hover>
+      {/* <Link className='qoxnd' to="/complete" >Complete</Link>
+      <Link  className='uqpvcen'  to="/pending">Pending</Link> */}
+      {/* </div> */}
+
+      <FinalCandidateListHeader />
+      <div style={{ marginLeft: '60px' }}>
+
+      <Table striped bordered hover >
         <thead>
           <tr>
             <th>Name</th>
@@ -273,50 +290,8 @@ const closeCandidatesWithRemarks = () => {
           </div>
         )}
       </Modal>
-      {/* --------------------------------------------NewOne-------------------------------------------- */}
-      {/* <Table striped bordered hover>
-         
-          {candidatesWithRemarks.map(candidate => (
-            <tr key={candidate.id} onClick={() => openModal(candidate)}>
-              <td>{candidate.fullName}</td>
-              <td style={{ color: 'gray' }}>{candidate.ApplyedDFor}</td>
-              <td style={{ color: 'gray' }}>{candidate.time}</td>
-              <td style={{ color: 'gray' }}>{candidate.date}</td>
-              <td style={{ color: '#0c0c0cc9' }} className={`stat-btn ${candidate.status === 'Selected' ? 'green-button' : candidate.status === 'ON Hold' ? 'yellow-button' : candidate.status === 'Rejected' ? 'red-button' : candidate.status === ''}`}>{candidate.status}</td>
-            </tr>
-          ))}
-        </Table> */}
 
-{/*         
-
-        {showCandidatesWithRemarks && (
-        <div>
-             <Button onClick={closeCandidatesWithRemarks}>Close</Button>
-
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Post</th>
-                <th>Time</th>
-                <th>Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {candidatesWithRemarks.map(candidate => (
-                <tr key={candidate.id} onClick={() => openModal(candidate)}>
-                  <td>{candidate.fullName}</td>
-                  <td style={{ color: 'gray' }}>{candidate.ApplyedDFor}</td>
-                  <td style={{ color: 'gray' }}>{candidate.time}</td>
-                  <td style={{ color: 'gray' }}>{candidate.date}</td>
-                  <td style={{ color: '#0c0c0cc9' }} className={`stat-btn ${candidate.status === 'Selected' ? 'green-button' : candidate.status === 'ON Hold' ? 'yellow-button' : candidate.status === 'Rejected' ? 'red-button' : candidate.status === ''}`}>{candidate.status}</td>
-                </tr>
-              ))}
-               </tbody>
-          </Table>
-        </div>
-      )} */}
+            </div>
     </div>
   );
 };
