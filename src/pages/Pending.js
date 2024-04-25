@@ -6,6 +6,10 @@ import '.././App.css'
 import { Link } from 'react-router-dom';
 import FinalCandidateListHeader from './FinalCandidateListHeader';
 
+
+// Set the app element
+Modal.setAppElement('#root'); // Assuming your root element has an id of 'root'
+
 const Pending = () => {
   const [clients, setClients] = useState([]);
   const [filteredClients, setFilteredClients] = useState([]);
@@ -79,7 +83,7 @@ const Pending = () => {
     <>
       <FinalCandidateListHeader />
       <div style={{ marginLeft: '60px' }}>
-        <h2 style={{marginTop: '1%', color: 'brown'}}>Pending</h2>
+        <h2 style={{ marginTop: '1%', color: 'brown' }}>Pending</h2>
         <Table striped bordered hover>
           <thead>
             <tr>
@@ -90,7 +94,7 @@ const Pending = () => {
               <th>Status</th>
             </tr>
           </thead>
-          <tbody>
+          {/* <tbody>
             {filteredClients.map(candidate => (
               <tr key={candidate.id} onClick={() => openModal(candidate)}>
                 <td >{candidate.fullName}</td>
@@ -101,8 +105,23 @@ const Pending = () => {
                   candidate.status === ''}`}>{candidate.status}</td>
               </tr>
             ))}
+          </tbody> */}
+          <tbody>
+            {filteredClients.map((candidate, index) => (
+              <tr key={`${candidate.id}-${index}`} onClick={() => openModal(candidate)}>
+                <td>{candidate.fullName}</td>
+                <td style={{ color: 'gray' }}>{candidate.ApplyedDFor}</td>
+                <td style={{ color: 'gray' }}>{candidate.time}</td>
+                <td style={{ color: 'gray' }}>{candidate.date}</td>
+                <td style={{ color: '#0c0c0cc9' }} className={`stat-btn ${candidate.status === 'Selected' ? 'green-button' : candidate.status === 'ON Hold' ? 'yellow-button' : candidate.status === 'Rejected' ? 'red-button' :
+                  candidate.status === ''}`}>{candidate.status}</td>
+              </tr>
+            ))}
           </tbody>
+
         </Table>
+
+        
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}

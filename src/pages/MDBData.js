@@ -204,11 +204,11 @@ export default function MDBData() {
 
     return (
         <div>
-            <h2>Employee Information Form</h2>
+            <h2 style={{textAlign: 'center'}}>Employee Information Form</h2>
 
             <div style={{ width: '100%', display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <form onSubmit={handleSubmit} className='dfea'>
-                    <div class="grid grid-cols-3 ss5d pt-6" >
+                    <div className="grid grid-cols-3 ss5d pt-6" >
 
                         <div>
 
@@ -243,7 +243,7 @@ export default function MDBData() {
                         <label htmlFor="location">Location</label>
                         <input className='hghgch' type="text" id="location" name="location" value={formData.location} onChange={handleChange} />
                     </div>
-                    <div class="grid grid-cols-3 ss5d pt-6" >
+                    <div className="grid grid-cols-3 ss5d pt-6" >
                         <div>
 
 
@@ -270,7 +270,7 @@ export default function MDBData() {
                     </div>
 
 
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="doj">DOJ</label>
                             <input className='hghgch' type="date" id="doj" name="doj" value={formData.doj} onChange={handleChange} />
@@ -291,7 +291,7 @@ export default function MDBData() {
                         <label htmlFor="trainingEnd">Training End</label>
                         <input className='hghgch' type="date" id="trainingEnd" name="trainingEnd" value={formData.trainingEnd} onChange={handleChange} />
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="onFloorDate">On Floor Date</label>
                             <input className='hghgch' type="date" id="onFloorDate" name="onFloorDate" value={formData.onFloorDate} onChange={handleChange} />
@@ -320,7 +320,7 @@ export default function MDBData() {
                             <option value="inactive">In Training</option>
                         </select>
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="WorkingMode">Working Mode</label>
                             {/* <input className='hghgch' type="text" id="WorkingMode" name="WorkingMode" value={formData.WorkingMode} onChange={handleChange} /> */}
@@ -363,7 +363,7 @@ export default function MDBData() {
 
                         </select>
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="supervisorL1">Supervisor L1</label>
                             <select className='hghgch' id="supervisorL1" name="supervisorL1" value={formData.supervisorL1} onChange={handleChange}>
@@ -388,7 +388,7 @@ export default function MDBData() {
                         <label htmlFor="aadharNumber">Aadhar Number</label>
                         <input className='hghgch' type="text" id="aadharNumber" name="aadharNumber" value={formData.aadharNumber} onChange={handleChange} />
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="gender">Gender</label>
                             {/* <input className='hghgch' type="text" id="gender" name="gender" value={formData.gender} onChange={handleChange} /> */}
@@ -416,7 +416,7 @@ export default function MDBData() {
                             <option value="inactive">In Training</option>
                         </select>
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="fatherHusbandName">Father HusbandName</label>
                             <input type="text" className='hghgch' id="fatherHusbandName" name="fatherHusbandName" value={formData.fatherHusbandName} onChange={handleChange} />
@@ -453,7 +453,7 @@ export default function MDBData() {
                         </select>
                     </div>
 
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="qualification">Qualification</label>
                             <input type="text" id="qualification" className='hghgch' name="qualification" onChange={handleChange} />
@@ -477,7 +477,7 @@ export default function MDBData() {
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="eduCategory">Edu Category</label>
                             <select className='hghgch' id="eduCategory" name="eduCategory" value={formData.eduCategory} onChange={handleChange}>
@@ -569,7 +569,7 @@ export default function MDBData() {
                             <option value="Saudi Arabian">Saudi Arabian</option>
                         </select>
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="category">Category</label>
                             <select className='hghgch' id="category" name="category" value={formData.category} onChange={handleChange}>
@@ -596,7 +596,7 @@ export default function MDBData() {
                         <label htmlFor="contactNumber">Contact Number</label>
                         <input className='hghgch' type="text" id="contactNumber" name="contactNumber" value={formData.contactNumber} onChange={handleChange} />
                     </div>
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
                             <label htmlFor="emergencyContact">Emergency Contact :</label>
                             <input type="text" className='hghgch' id="emergencyContact" name="emergencyContact" value={formData.emergencyContact} onChange={handleChange} />
@@ -622,7 +622,7 @@ export default function MDBData() {
                             {/* Add more options as needed */}
                         </select>
                     </div>
-                    <div class="grid grid-cols-2 ss5d" >
+                    <div className="grid grid-cols-2 ss5d" >
                         {/* <div id='expd'>
 
                         <div>
@@ -636,7 +636,7 @@ export default function MDBData() {
                         </div>
                         </div> */}
                         {formData.fresher === 'No' && ( // Render expd div only when fresher value is 'No'
-                            <div id='expd' class="grid grid-cols-2 ss5d">
+                            <div id='expd' className="grid grid-cols-2 ss5d">
                                 <div>
                                     <label htmlFor="previousOrganization">Previous Organization:</label>
                                     <input type="text" className='hghgch' id="previousOrganization" name="previousOrganization" value={formData.previousOrganization} onChange={handleChange} />
@@ -673,14 +673,14 @@ export default function MDBData() {
                         <Select id="languageKnows" name="languageKnows" onChange={handleSelectedValuesChange}
                             defaultValue={[options[2], options[3]]}
                             isMulti
-                            name="colors"
+                            // name="colors"
                             options={options}
                             className="basic-multi-select"
                             classNamePrefix="select"
                         />
 
                     </div>
-                    <div class="grid grid-cols-2 ss5d" >
+                    <div className="grid grid-cols-2 ss5d" >
                         <div>
                             <label htmlFor="differentlyAbled">Differently Abled:</label>
                             {/* <input type="text" className='hghgch' id="differentlyAbled" name="differentlyAbled" value={formData.differentlyAbled} onChange={handleChange} /> */}
@@ -694,7 +694,7 @@ export default function MDBData() {
 
                         </div>
                         {formData.differentlyAbled === 'Yes' && (
-                            <div class="grid grid-cols-2 ss5d">
+                            <div className="grid grid-cols-2 ss5d">
                                 <div>
                                     <label htmlFor="broadCategoryOfDisability">Broad Category of Disability:</label>
                                     <input type="text" className='hghgch' id="broadCategoryOfDisability" name="broadCategoryOfDisability" value={formData.broadCategoryOfDisability} onChange={handleChange} />
@@ -718,7 +718,7 @@ export default function MDBData() {
 
                     </div>
 
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
 
                             <label htmlFor="esiApplicability">ESI Applicability:</label>
@@ -778,7 +778,7 @@ export default function MDBData() {
                     </div>
 
 
-                    <div class="grid grid-cols-3 ss5d  pt-6" >
+                    <div className="grid grid-cols-3 ss5d  pt-6" >
                         <div>
 
                             <label htmlFor="bankBranch">Bank Branch:</label>

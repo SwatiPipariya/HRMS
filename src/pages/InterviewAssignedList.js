@@ -198,8 +198,8 @@ const InterviewAssignList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {filteredCandidates.map(candidate => (
-                        <tr key={candidate.id} onClick={() => handleRowClick(candidate)}>
+                    {filteredCandidates.map((candidate, index) => (
+                        <tr key={`${candidate.id}-${index}`} onClick={() => handleRowClick(candidate)}>
                             <td>{candidate.candidateName}</td>
                             <td>{candidate.ApplyedFor}</td>
                             <td>{candidate.assignedBy}</td>

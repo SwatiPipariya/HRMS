@@ -5,7 +5,7 @@ import { CiLogout } from "react-icons/ci";
 import TimeAndDate from "../calander/TimeAndDate";
 function Navbar() { 
 
-
+  
     const handleButtonClick = () => {
       console.log('run')
 
@@ -90,12 +90,12 @@ function Navbar() {
       };
     return (
         
-        <div class="header">
+        <div className="header">
             <span id="magnify">
                 <button id="tggButton">
                    <FiSearch className='srch' />
                 </button>
-                <i class="fa fa-search" id="mkijn" aria-hidden="true"></i>
+                <i className="fa fa-search" id="mkijn" aria-hidden="true"></i>
                 <input type="text" id="searchin" placeholder="Search Dashboard" />
             </span>
           

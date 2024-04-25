@@ -227,8 +227,8 @@ const CandidatesList = () => {
               <td>Data 3</td>
             </tr> */}
             {/* Add more rows as needed */}
-            {filteredCandidates.map(candidate => (
-            <tr key={candidate.id} onClick={() => openModal(candidate)}>
+            {filteredCandidates.map((candidate, index) => (
+            <tr key={`${candidate.id}-${index}`} onClick={() => openModal(candidate)}>
               <td>{candidate.fullName}</td>
               <td style={{ color: 'gray' }}>{candidate.phoneNo}</td>
               {/* <td style={{ color: 'gray' }}>{candidate.email}</td> */}
@@ -496,8 +496,8 @@ const CandidatesList = () => {
                 >
                   <option value="">Select a User</option>
                   {/* Assume userList is an array of available users */}
-                  {userList?.map((user) => (
-                    <option key={user.id} value={user.id} >
+                  {userList?.map((user, index) => (
+                    <option key={`${user.id}-${index}`} value={user.id} >
                       {user.username}-{user.department}
                     </option>
                   ))}

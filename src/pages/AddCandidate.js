@@ -345,19 +345,19 @@ function AddCandidate() {
 
           <div className="input-group" style={{ width: '30%' }}>
             <label htmlFor="fullName">Full Name:</label>
-            <input type="text" id="fullName " className='hghgch' name="fullName" required onChange={handleChange} required />
+            <input type="text" id="fullName " className='hghgch' name="fullName" onChange={handleChange} required />
           </div>
           <div className="input-group" style={{ width: '30%' }}>
             <label htmlFor="dob">Date of Birth:</label>
-            <input type="date" id="dob " className='hghgch' name="dob" required onChange={handleChange} required />
+            <input type="date" id="dob " className='hghgch' name="dob" onChange={handleChange} required />
           </div>
           <div className="input-group" style={{ width: '30%' }}>
             <label htmlFor="fatherName">Father's Name:</label>
-            <input type="text" id="fatherName  " className='hghgch' required name="fatherName" onChange={handleChange} required />
+            <input type="text" id="fatherName  " className='hghgch' name="fatherName" onChange={handleChange} required />
           </div>
         </div>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-          <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" onClick={handleCheck}>Submit Candidate</button>
+          <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2" onClick={handleCheck}>Submit Candidate</button>
         </div>
 
 
@@ -931,8 +931,8 @@ function AddCandidate() {
           >
             <option value="">Select a User</option>
             {/* Assume userList is an array of available users */}
-            {userList?.map((user) => (
-              <option key={user.id} value={user.id} >
+            {userList?.map((user, index) => (
+              <option key={`${user.id}-${index}`} value={user.id} >
                 {user.username}-{user.department}
               </option>
             ))}
